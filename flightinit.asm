@@ -231,12 +231,6 @@ fli8:	b16store_array FilteredOut1, Temp
 	lrv RxTimeoutLimit, 250
 
 	lrv ButtonDelay, 0
-
-	b16clr RxRoll
-	b16clr RxPitch
-	b16clr RxYaw
-	b16clr RxThrottle
-	b16clr RxAux
 	
 	b16clr AutoDisarmDelay
 

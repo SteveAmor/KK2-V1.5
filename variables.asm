@@ -42,6 +42,8 @@ FixedPointVariableEnumerate168 GyroYaw
 FixedPointVariableEnumerate168 GyroRollZero
 FixedPointVariableEnumerate168 GyroPitchZero
 FixedPointVariableEnumerate168 GyroYawZero
+FixedPointVariableEnumerate168 GyroRollVC
+FixedPointVariableEnumerate168 GyroPitchVC
 
 FixedPointVariableEnumerate168 AccX
 FixedPointVariableEnumerate168 AccY
@@ -123,10 +125,10 @@ FixedPointVariableEnumerate168 BattAlarmVoltage
 FixedPointVariableEnumerate168 AccAngleRoll
 FixedPointVariableEnumerate168 AccAnglePitch
 
-FixedPointVariableEnumerate168 Debug6
-FixedPointVariableEnumerate168 Debug5
-FixedPointVariableEnumerate168 Debug7
-FixedPointVariableEnumerate168 Debug8
+;FixedPointVariableEnumerate168 Debug6
+;FixedPointVariableEnumerate168 Debug5
+;FixedPointVariableEnumerate168 Debug7
+;FixedPointVariableEnumerate168 Debug8
 
 FixedPointVariableEnumerate168 LimitV
 FixedPointVariableEnumerate168 Value

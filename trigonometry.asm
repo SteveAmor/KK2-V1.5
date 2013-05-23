@@ -60,7 +60,7 @@ RotateVector:
 	
 Rotate3dVector:
 	
-	b16load GyroPitch		;rotate around X axis (pitch)	
+	b16load GyroPitchVC		;rotate around X axis (pitch)	
 	rcall transfer168824
 	rcall thetascale
 
@@ -71,7 +71,7 @@ Rotate3dVector:
 	b824mov VectorZ, VectorNewB
 
 
-	b16load GyroRoll		;rotate around Y axis (roll)
+	b16load GyroRollVC		;rotate around Y axis (roll)
 	rcall transfer168824
 	rcall thetascale
 

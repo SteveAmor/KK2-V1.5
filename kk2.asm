@@ -1,5 +1,5 @@
 
-;All code by Rolf R Bakke 2011, 2012
+;All code by Rolf R Bakke 2011, 2012, 2013
 
 ;best viewed with a TAB-setting of 8 and monospace font.
 
@@ -84,6 +84,29 @@ reset:	ldi t,low(ramend)	;initalize stack pointer
 
 	lrv Status, 0
 	lrv StatusOldState, 0 
+
+	clr t
+	sts RollL, t
+	sts RollH, t
+	sts PitchL, t
+	sts PitchH, t
+	sts ThrottleL, t
+	sts ThrottleH, t
+	sts YawL, t
+	sts YawH, t
+	sts AuxL, t
+	sts AuxH, t
+
+	sts CppmChannel1L, t
+	sts CppmChannel1H, t
+	sts CppmChannel2L, t
+	sts CppmChannel2H, t
+	sts CppmChannel3L, t
+	sts CppmChannel3H, t
+	sts CppmChannel4L, t
+	sts CppmChannel4H, t
+	sts CppmChannel5L, t
+	sts CppmChannel5H, t
 
 	b16ldi CheckRxDelay, 400 * 10
 

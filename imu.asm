@@ -38,6 +38,9 @@ Imu:	;--- Get Sensor Data ---
 
 	;--- Add correction data to gyro inputs based on difference between Euler angles and acc angles ---
 
+	b16mov GyroRollVC, GyroRoll			;fork gyrovalues to be used in 3D vector calc.
+	b16mov GyroPitchVC, GyroPitch
+
 	b16ldi Temp, 20					;skip correction at angles greater than +-20
 	b16cmp AccAnglePitch, Temp
 	longbrge im40
@@ -60,11 +63,11 @@ Imu:	;--- Get Sensor Data ---
 	 
 	b16sub Temp, EulerAngleRoll, AccAngleRoll	;add roll correction
 	b16fdiv Temp, 2
-	b16add GyroRoll, GyroRoll, Temp
+	b16add GyroRollVC, GyroRollVC, Temp
 
 	b16sub Temp, EulerAnglePitch, AccAnglePitch	;add pitch correction
 	b16fdiv Temp, 2
-	b16add GyroPitch, GyroPitch, Temp
+	b16add GyroPitchVC, GyroPitchVC, Temp
 
 	;rvsetflagtrue flagDebugBuzzerOn
 	rjmp im41
